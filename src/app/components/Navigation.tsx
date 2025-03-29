@@ -15,19 +15,22 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="fixed top-6 left-0 right-0 z-50">
-      <nav className="max-w-[90%] mx-auto rounded-[10px] border border-[#262626] bg-background backdrop-blur-sm overflow-hidden">
-        <div className="container mx-auto px-6">
+    <div className="fixed top-0 md:top-6 left-0 right-0 z-50">
+      <nav className={`md:max-w-[90%] mx-auto rounded-[10px] border border-[#262626] ${isMenuOpen ? 'h-screen w-full bg-[#262626]' : 'backdrop-blur-sm'} overflow-hidden`}>
+        <div className="container mx-auto px-2 md:px-6">
           <div className="flex justify-between items-center h-15">
             {/* Logo */}
-            <Link href="/" className="text-2xl font-koulen text-primary">
-            <Image 
-              src="/images/logo.svg"
-              alt="Waleed Logo" 
-              width={250} 
-              height={100}
-              priority
-            />
+            <Link href="/">
+            <div className="relative w-[180px] md:w-[250px]">
+              <Image 
+                src="/images/logo.svg"
+                alt="Waleed Logo" 
+                width={250} 
+                height={100}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
             </Link>
 
             {/* Desktop Menu */}
@@ -45,7 +48,8 @@ const Navigation = () => {
               {/* Hire Me Button */}
               <Link
                 href="#contact"
-                className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-md transition-colors duration-300 flex items-center"
+                style={{ backgroundColor: "#01bf69" }}
+                className="text-white px-4 py-2 rounded-md transition-colors duration-300 flex items-center font-medium"
               >
                 <span>Hire Me</span>
                 <svg 
@@ -98,12 +102,12 @@ const Navigation = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 space-y-4">
+            <div className="md:hidden py-2 space-y-1 h-[calc(100vh-60px)] flex flex-col justify-center bg-[#262626]">
               {navItems.map((item) => (
-                <div key={item.name} className="block">
+                <div key={item.name} className="block text-center">
                   <Link
                     href={item.href}
-                    className="block py-2 text-white font-medium hover:text-[#01bf69] transition-colors duration-300"
+                    className="block py-4 text-white text-xl font-medium hover:text-[#01bf69] transition-colors duration-300"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -112,10 +116,11 @@ const Navigation = () => {
               ))}
               
               {/* Mobile Hire Me Button */}
-              <div className="block">
+              <div className="block text-center mt-4">
                 <Link
                   href="#contact"
-                  className="block bg-primary hover:bg-primary/80 text-white py-2 px-4 rounded-md transition-colors duration-300 flex items-center"
+                  style={{ backgroundColor: "#01bf69" }}
+                  className="text-white text-xl px-10 py-3 rounded-md transition-colors duration-300 flex items-center justify-center mx-auto"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span>Hire Me</span>
@@ -139,6 +144,10 @@ const Navigation = () => {
           )}
         </div>
       </nav>
+      {/* Full screen overlay when menu is open on mobile */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-[#262626] z-[-1] md:hidden"></div>
+      )}
     </div>
   );
 };
