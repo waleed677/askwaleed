@@ -9,8 +9,16 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="fixed inset-0 overflow-hidden">
-      {/* Plain Background */}
-      <div className="absolute inset-0 z-0 bg-background"></div>
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-overlay" 
+          style={{ backgroundImage: 'url(/images/bg.jpg)' }}
+        ></div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-background opacity-80"></div>
+      </div>
       
       {/* Content Container - Absolute Center */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full max-w-3xl px-4">
