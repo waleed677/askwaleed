@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import AboutMe from '../components/AboutMe';

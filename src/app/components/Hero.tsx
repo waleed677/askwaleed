@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import AnimatedBackground from './AnimatedBackground';
 
@@ -47,7 +47,7 @@ const Hero = () => {
       <AnimatedBackground />
       
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center py-20 md:py-40">
+        <div className="flex flex-col items-center mt-20 md:mt-40">
           <div className="animate-fade-in w-full max-w-[800px]">
             <div className="w-fit">
               <p className="text-[20px] md:text-[60px] font-poppins font-extrabold">

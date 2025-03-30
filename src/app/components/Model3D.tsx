@@ -43,7 +43,7 @@ function Loader() {
 
 const Model3D = () => {
   return (
-    <div className="w-full h-screen transition-opacity relative animate-fade-in-delay-2">
+    <div className="w-full h-[625px] transition-opacity relative animate-fade-in-delay-2">
       <Canvas
         camera={{ position: [1, 5, 5] }}
         gl={{ alpha: true, antialias: true }}
