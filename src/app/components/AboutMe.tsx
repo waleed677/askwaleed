@@ -16,7 +16,7 @@ const AboutMe = () => {
       {/* Two Column Layout */}
       <div className="flex flex-col md:flex-row gap-12 items-center">
         {/* Left Column - Image */}
-        <div className="w-full md:w-1/3 flex justify-center">
+        <div className="w-full md:w-1/3 flex justify-center opacity-0 animate-slide-in-left">
           <div className="relative">
             <div 
               className="absolute inset-0 rounded-full" 
@@ -39,7 +39,7 @@ const AboutMe = () => {
         </div>
         
         {/* Right Column - Text */}
-        <div className="w-full md:w-2/3">
+        <div className="w-full md:w-2/3 opacity-0 animate-slide-in-right">
           <div className="space-y-8 font-poppins text-lg">
             <div className="flex items-start gap-4">
               <span className="text-2xl">👨‍💻</span>

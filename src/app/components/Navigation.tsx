@@ -6,6 +6,21 @@ import { useState } from 'react';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   const navItems = [
     { name: 'About', href: '#about' },
     { name: 'Education', href: '#education' },
@@ -39,6 +54,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => handleScroll(e, item.href)}
                   className="text-white font-medium hover:text-[#01bf69] transition-colors duration-300"
                 >
                   {item.name}
@@ -48,6 +64,7 @@ const Navigation = () => {
               {/* Hire Me Button */}
               <Link
                 href="#contact"
+                onClick={(e) => handleScroll(e, '#contact')}
                 style={{ backgroundColor: "#01bf69" }}
                 className="text-white px-4 py-2 rounded-md transition-colors duration-300 flex items-center font-medium"
               >
@@ -107,8 +124,8 @@ const Navigation = () => {
                 <div key={item.name} className="block text-center">
                   <Link
                     href={item.href}
+                    onClick={(e) => handleScroll(e, item.href)}
                     className="block py-4 text-white text-xl font-medium hover:text-[#01bf69] transition-colors duration-300"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
@@ -119,9 +136,9 @@ const Navigation = () => {
               <div className="block text-center mt-4">
                 <Link
                   href="#contact"
+                  onClick={(e) => handleScroll(e, '#contact')}
                   style={{ backgroundColor: "#01bf69" }}
                   className="text-white text-xl px-10 py-3 rounded-md transition-colors duration-300 flex items-center justify-center mx-auto"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   <span>Hire Me</span>
                   <svg 

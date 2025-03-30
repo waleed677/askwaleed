@@ -3,31 +3,20 @@ import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, OrbitControls, Html } from '@react-three/drei';
 import * as THREE from 'three';
-import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 
 // Model URL 
 const MODEL_URL = "https://1x3dlmcdtl30e8ka.public.blob.vercel-storage.com/gaming_desktop_pc-NlvFCIGyKfdoMKNX93il1IvWh43xUn.glb";
 
-type GLTFResult = GLTF & {
-  nodes: {
-    [key: string]: THREE.Mesh;
-  };
-  materials: {
-    [key: string]: THREE.Material;
-  };
-};
-
 function Model() {
-  const { scene } = useGLTF(MODEL_URL) as GLTFResult;
-  const modelRef = useRef<THREE.Object3D>();
+  const { scene } = useGLTF(MODEL_URL);
+  const modelRef = useRef<THREE.Object3D>(null);
 
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += 0.005; // Adjust rotation speed here
+      modelRef.current.rotation.y += 0.005;
     }
   });
 
-  // Adjust scale and position for better visibility
   return <primitive ref={modelRef} object={scene} scale={0.5} position={[0, 1.5, 0]} />;
 }
 
