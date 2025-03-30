@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Koulen } from "next/font/google";
+import { Koulen, Poppins } from "next/font/google";
 import "./globals.css";
 
 const koulen = Koulen({
   weight: "400",
   variable: "--font-koulen",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
   subsets: ["latin"],
 });
 
@@ -21,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${koulen.variable} ${koulen.variable} antialiased`}
+        className={`${koulen.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

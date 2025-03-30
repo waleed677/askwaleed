@@ -14,6 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         koulen: ['var(--font-koulen)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
       },
       animation: {
         'bounce': 'bounce 1s infinite',
