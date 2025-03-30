@@ -51,12 +51,12 @@ const Hero = () => {
           <div className="animate-fade-in w-full max-w-[800px]">
             <div className="w-fit">
               <p className="text-[20px] md:text-[60px] font-poppins font-extrabold">
-                Hi, I'm <span className="text-primary mx-2">Waleed</span>
+                Hi, I&apos;m <span className="text-primary mx-2">Waleed</span>
                 <span className="animate-wave text-yellow-400 text-[30px] md:text-[50px]">👋</span>
               </p>
               
               <div className="mt-2 md:mt-4 text-[18px] md:text-[32px] font-medium animate-fade-in-delay font-poppins">
-                <span className="text-white/80 mr-2">I'm a</span>
+                <span className="text-white/80 mr-2">I&apos;m a</span>
                 <span className={`text-primary ${isDeleting ? 'opacity-0' : 'opacity-100'}`} style={{ transition: 'opacity 1s' }}>
                   {text}
                 </span>
@@ -70,7 +70,7 @@ const Hero = () => {
           </div>
 
           {/* 3D Model */}
-          <div className="w-full hidden md:block">
+          <div className="w-full hidden md:block mt-10">
             <ErrorBoundary fallback={
               <div className="text-primary text-xl">
                 Failed to load 3D model. Please refresh the page.
