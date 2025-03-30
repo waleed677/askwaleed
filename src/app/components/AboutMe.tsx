@@ -22,10 +22,10 @@ const AboutMe = () => {
               className="absolute inset-0 rounded-full" 
               style={{ 
                 boxShadow: '0 0 22.5px 7.5px var(--primary)',
-                transform: 'scale(1.05)'
+                transform: 'scale(1)'
               }}
             ></div>
-            <div className="relative rounded-full overflow-hidden h-[300px] w-[300px]">
+            <div className="relative rounded-full overflow-hidden h-[250px] w-[250px]">
               <Image
                 src="/images/me.jpg"
                 alt="Waleed"
@@ -40,16 +40,37 @@ const AboutMe = () => {
         
         {/* Right Column - Text */}
         <div className="w-full md:w-2/3">
-          <div className="space-y-4 font-poppins text-lg">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+          <div className="space-y-8 font-poppins text-lg">
+            <div className="flex items-start gap-4">
+              <span className="text-2xl">👨‍💻</span>
+              <p>
+                I&apos;m a Senior Software Engineer with 7 years of experience, specializing in full-stack development and building high-performance web applications.
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-2xl">🏦</span>
+              <p>
+                Currently working as a Senior Frontend Developer at UOB Bank, I design and develop scalable solutions that enhance user experiences and streamline enterprise operations.
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-2xl">🛠</span>
+              <p>
+                From crafting intuitive UI/UX with React and Vue to building robust backend systems with Node.js and databases, I bring a full-stack approach to software development.
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-2xl">🚀</span>
+              <p>
+                Passionate about system architecture, cloud technologies, and performance optimization, I thrive on solving complex challenges and delivering impactful solutions.
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-2xl">💡</span>
+              <p>
+                Always learning, always innovating—because great software is built by those who embrace the full technology stack.
+              </p>
+            </div>
           </div>
         </div>
       </div>

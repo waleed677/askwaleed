@@ -29,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${koulen.variable} ${poppins.variable} antialiased`}
       >
-        {children}
+        <div className="mx-auto">
+          {children}
+        </div>
       </body>
     </html>
   );

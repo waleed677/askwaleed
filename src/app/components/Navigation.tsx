@@ -21,11 +21,11 @@ const Navigation = () => {
           <div className="flex justify-between items-center h-15">
             {/* Logo */}
             <Link href="/">
-            <div className="relative w-[180px] md:w-[250px]">
+            <div className="relative w-[180px] md:w-[220px]">
               <Image 
                 src="/images/logo.svg"
                 alt="Waleed Logo" 
-                width={250} 
+                width={220} 
                 height={100}
                 className="w-full h-auto"
                 priority
