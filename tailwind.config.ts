@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: 'var(--primary)',
-        background: 'var(--background)'
+        background: 'var(--background)',
+        standard: 'var(--standard)',
       },
       fontFamily: {
         koulen: ['var(--font-koulen)', 'sans-serif'],

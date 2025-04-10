@@ -4,7 +4,7 @@ export default function DesignLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen w-[90%]">
+    <div className="min-h-screen">
       {/* Main Content */}
       {children}
     </div>

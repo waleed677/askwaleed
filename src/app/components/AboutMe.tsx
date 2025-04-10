@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const AboutMe = () => {
   return (
-    <div className="container mx-auto px-4 md:px-6 py-20 bg-background">
+    <div id="about" className="container mx-auto px-4 md:px-6 py-20 bg-background">
       {/* Section Title */}
       <div className="text-center mb-4">
         <h2 className="text-[20px] font-poppins font-medium text-white/80">INTRODUCTION</h2>
@@ -14,7 +14,7 @@ const AboutMe = () => {
       </div>
       
       {/* Two Column Layout */}
-      <div className="flex flex-col md:flex-row gap-12 items-center">
+      <div className="flex flex-col md:flex-row gap-12 items-center w-[90%]">
         {/* Left Column - Image */}
         <div className="w-full md:w-1/3 flex justify-center opacity-0 animate-slide-in-left">
           <div className="relative">

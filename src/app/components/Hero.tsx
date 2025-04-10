@@ -50,12 +50,12 @@ const Hero = () => {
         <div className="flex flex-col items-center mt-20 md:mt-40 md:ml-20">
           <div className="animate-fade-in w-full max-w-[800px]">
             <div className="w-fit">
-              <p className="text-[20px] md:text-[60px] font-poppins font-extrabold">
+              <p className="text-[24px] md:text-[60px] font-poppins font-extrabold text-center md:text-left">
                 Hi, I&apos;m <span className="text-primary mx-2">Waleed</span>
                 <span className="animate-wave text-yellow-400 text-[30px] md:text-[50px]">👋</span>
               </p>
               
-              <div className="mt-2 md:mt-4 text-[18px] md:text-[32px] font-medium animate-fade-in-delay font-poppins">
+              <div className="mt-2 md:mt-4 text-[18px] md:text-[32px] font-medium animate-fade-in-delay font-poppins text-center md:text-left">
                 <span className="text-white/80 mr-2">I&apos;m a</span>
                 <span className={`text-primary ${isDeleting ? 'opacity-0' : 'opacity-100'}`} style={{ transition: 'opacity 1s' }}>
                   {text}
@@ -63,7 +63,7 @@ const Hero = () => {
                 <span className={`w-[2px] h-[1.2em] bg-primary inline-block ml-1 animate-pulse ${isDeleting ? 'opacity-0' : 'opacity-100'}`}></span>
               </div>
               
-              <p className="mt-4 text-[20px] md:text-[32px] font-semibold font-poppins animate-fade-in-delay-2">
+              <p className="mt-5 md:mt-4 text-[20px] md:text-[32px] font-semibold font-poppins animate-fade-in-delay-2 text-center md:text-left">
                 Turning ideas into scalable digital experiences..
               </p>
             </div>
