@@ -47,12 +47,20 @@ const Hero = () => {
       <AnimatedBackground />
       
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center mt-20 md:mt-40 md:ml-20">
-          <div className="animate-fade-in w-full max-w-[800px]">
-            <div className="w-fit">
-              <p className="text-[24px] md:text-[60px] font-poppins font-extrabold text-center md:text-left">
+        <div className="flex flex-col items-center mt-20 md:mt-30 md:ml-10">
+          <div className="animate-fade-in w-full max-w-5xl">
+            <div className="w-fit relative">
+              {/* Vertical Line - Simplified Styling */}
+              <div className="hidden md:flex absolute top-2 -left-10 flex-col items-center z-50">
+                <div className="w-5 h-5 rounded-full bg-primary"></div>
+                {/* Apply mask for fade effect */}
+                <div className="w-0.5 h-[250px] bg-primary [mask-image:linear-gradient(to_bottom,white_75%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,white_75%,transparent_100%)]"></div>
+              </div>
+              {/* --- END Vertical Line --- */}
+
+              <p className="text-[24px] md:text-[100px] font-poppins font-extrabold text-center md:text-left">
                 Hi, I&apos;m <span className="text-primary mx-2">Waleed</span>
-                <span className="animate-wave text-yellow-400 text-[30px] md:text-[50px]">👋</span>
+                <span className="animate-wave text-yellow-400 text-[30px] md:text-[80px]">👋</span>
               </p>
               
               <div className="mt-2 md:mt-4 text-[18px] md:text-[32px] font-medium animate-fade-in-delay font-poppins text-center md:text-left">
@@ -63,8 +71,8 @@ const Hero = () => {
                 <span className={`w-[2px] h-[1.2em] bg-primary inline-block ml-1 animate-pulse ${isDeleting ? 'opacity-0' : 'opacity-100'}`}></span>
               </div>
               
-              <p className="mt-5 md:mt-4 text-[20px] md:text-[32px] font-semibold font-poppins animate-fade-in-delay-2 text-center md:text-left">
-                Turning ideas into scalable digital experiences..
+              <p className="mt-5 md:mt-4 text-[20px] md:text-[28px] font-semibold font-poppins animate-fade-in-delay-2 text-center md:text-left">
+              A creative Frontend Developer with 3+ years of experience in building high-performance, scalable, and responsive web solutions.
               </p>
             </div>
           </div>

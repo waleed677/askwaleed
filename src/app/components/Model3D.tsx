@@ -13,11 +13,11 @@ function Model() {
 
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += 0.005;
+      modelRef.current.rotation.y += 0.003;
     }
   });
 
-  return <primitive ref={modelRef} object={scene} scale={0.5} position={[0, 1.5, 0]} />;
+  return <primitive ref={modelRef} object={scene} scale={0.3} position={[0, 0, 0]} />;
 }
 
 function Loader() {
@@ -32,15 +32,19 @@ function Loader() {
 
 const Model3D = () => {
   return (
-    <div className="w-full h-[625px] transition-opacity relative animate-fade-in-delay-2">
+    <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] transition-opacity relative animate-fade-in-delay-2">
       <Canvas
-        camera={{ position: [1, 5, 5] }}
+        camera={{ position: [0, 5, 5], fov: 30 }}
         gl={{ alpha: true, antialias: true }}
-        style={{ background: "transparent" }}
+        style={{ 
+          background: "transparent",
+          width: "100%",
+          height: "100%"
+        }}
       >
         <ambientLight intensity={1.5} />
         <directionalLight
-          position={[15, 15, 15]}
+          position={[15, 25, 15]}
           intensity={1.5}
         />
         <Suspense fallback={<Loader />}>
@@ -49,8 +53,8 @@ const Model3D = () => {
             enablePan={false}
             enableZoom={false}
             enableRotate={true}
-            minPolarAngle={Math.PI / 3}
-            maxPolarAngle={Math.PI / 3}
+            minPolarAngle={Math.PI / 2.4}
+            maxPolarAngle={Math.PI / 2.4}
             rotateSpeed={6}
           />
         </Suspense>
